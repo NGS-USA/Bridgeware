@@ -1,0 +1,50 @@
+const express = require('express')
+const cors = require('cors')
+const helmet = require('helmet')
+const rateLimit = require('express-rate-limit')
+const logger = require('./lib/logger')
+require('dotenv').config()
+
+const app = express()
+const PORT = process.env.PORT || 4000
+
+app.use(helmet())
+app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:3000' }))
+app.use(express.json())
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  message: 'Too many requests, please try again later'
+})
+app.use(limiter)
+
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  message: 'Too many login attempts, please try again later'
+})
+
+app.use((req, res, next) => {
+  logger.info({ method: req.method, url: req.url, ip: req.ip })
+  next()
+})
+
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', platform: 'Bridgeware', timestamp: new Date() })
+})
+
+const ticketsRouter = require('./routes/tickets')
+const companiesRouter = require('./routes/companies')
+
+app.use('/api/tickets', ticketsRouter)
+app.use('/api/companies', companiesRouter)
+
+app.use((err, req, res, next) => {
+  logger.error({ error: err.message, stack: err.stack })
+  res.status(500).json({ error: 'Internal server error' })
+})
+
+app.listen(PORT, () => {
+  logger.info(`Bridgeware backend running on port ${PORT}`)
+})
