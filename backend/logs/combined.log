@@ -7,3 +7,5 @@
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-03T20:48:15.389Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-03T20:48:22.619Z"}
 {"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T20:50:08.966Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T20:55:23.982Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/health"},"timestamp":"2026-05-03T20:55:29.250Z"}
