@@ -15,3 +15,5 @@
 {"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:14:37.704Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/contacts"},"timestamp":"2026-05-04T23:14:43.496Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/favicon.ico"},"timestamp":"2026-05-04T23:14:44.703Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:20:36.966Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-04T23:20:40.452Z"}

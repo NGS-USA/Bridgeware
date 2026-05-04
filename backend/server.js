@@ -37,10 +37,12 @@ app.get('/health', (req, res) => {
 const ticketsRouter = require('./routes/tickets')
 const companiesRouter = require('./routes/companies')
 const contactsRouter = require('./routes/contacts')
+const opportunitiesRouter = require('./routes/opportunities')
 
 app.use('/api/tickets', ticketsRouter)
 app.use('/api/companies', companiesRouter)
 app.use('/api/contacts', contactsRouter)
+app.use('/api/opportunities', opportunitiesRouter)
 
 app.use((err, req, res, next) => {
   logger.error({ error: err.message, stack: err.stack })
