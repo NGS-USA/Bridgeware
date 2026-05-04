@@ -49,6 +49,7 @@ const vendorsRouter = require('./routes/vendors')
 const inventoryRouter = require('./routes/inventory')
 const purchaseOrdersRouter = require('./routes/purchaseOrders')
 const notesRouter = require('./routes/notes')
+const timeEntriesRouter = require('./routes/timeEntries')
 
 app.use('/api/tickets', ticketsRouter)
 app.use('/api/companies', companiesRouter)
@@ -65,6 +66,7 @@ app.use('/api/vendors', vendorsRouter)
 app.use('/api/inventory', inventoryRouter)
 app.use('/api/purchase-orders', purchaseOrdersRouter)
 app.use('/api/notes', notesRouter)
+app.use('/api/time-entries', timeEntriesRouter)
 
 app.use((err, req, res, next) => {
   logger.error({ error: err.message, stack: err.stack })
