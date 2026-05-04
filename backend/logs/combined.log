@@ -19,3 +19,16 @@
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-04T23:20:40.452Z"}
 {"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:21:53.244Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/quotes"},"timestamp":"2026-05-04T23:21:56.054Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:51:37.391Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:51:58.769Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:05.456Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:07.477Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:13.552Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:14.416Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:15.052Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:20.933Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:24.435Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:28.022Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:32.516Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:41.713Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:45.929Z"}
