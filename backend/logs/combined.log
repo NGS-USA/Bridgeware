@@ -32,3 +32,9 @@
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:32.516Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:41.713Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:52:45.929Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:54:01.942Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:16.142Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:19.497Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:54:20.870Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:24.147Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:24.985Z"}
