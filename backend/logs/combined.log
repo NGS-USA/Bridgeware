@@ -9,3 +9,9 @@
 {"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T20:50:08.966Z"}
 {"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T20:55:23.982Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/health"},"timestamp":"2026-05-03T20:55:29.250Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T20:59:11.846Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/health"},"timestamp":"2026-05-03T20:59:15.670Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-03T21:01:13.427Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-04T23:14:37.704Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/contacts"},"timestamp":"2026-05-04T23:14:43.496Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/favicon.ico"},"timestamp":"2026-05-04T23:14:44.703Z"}
