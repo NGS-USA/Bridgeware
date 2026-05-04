@@ -48,6 +48,7 @@ const teamsRouter = require('./routes/teams')
 const vendorsRouter = require('./routes/vendors')
 const inventoryRouter = require('./routes/inventory')
 const purchaseOrdersRouter = require('./routes/purchaseOrders')
+const notesRouter = require('./routes/notes')
 
 app.use('/api/tickets', ticketsRouter)
 app.use('/api/companies', companiesRouter)
@@ -63,6 +64,7 @@ app.use('/api/teams', teamsRouter)
 app.use('/api/vendors', vendorsRouter)
 app.use('/api/inventory', inventoryRouter)
 app.use('/api/purchase-orders', purchaseOrdersRouter)
+app.use('/api/notes', notesRouter)
 
 app.use((err, req, res, next) => {
   logger.error({ error: err.message, stack: err.stack })
