@@ -41,6 +41,7 @@ const opportunitiesRouter = require('./routes/opportunities')
 const quotesRouter = require('./routes/quotes')
 const invoicesRouter = require('./routes/invoices')
 const projectsRouter = require('./routes/projects')
+const tasksRouter = require('./routes/tasks')
 
 app.use('/api/tickets', ticketsRouter)
 app.use('/api/companies', companiesRouter)
@@ -49,6 +50,7 @@ app.use('/api/opportunities', opportunitiesRouter)
 app.use('/api/quotes', quotesRouter)
 app.use('/api/invoices', invoicesRouter)
 app.use('/api/projects', projectsRouter)
+app.use('/api/tasks', tasksRouter)
 
 app.use((err, req, res, next) => {
   logger.error({ error: err.message, stack: err.stack })
