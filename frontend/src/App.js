@@ -6,6 +6,7 @@ import CRM from './pages/CRM'
 import Opportunities from './pages/Opportunities'
 import Invoicing from './pages/Invoicing'
 import Projects from './pages/Projects'
+import HR from './pages/HR'
 
 const queryClient = new QueryClient()
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/sales" element={<Opportunities />} />
             <Route path="/invoicing" element={<Invoicing />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/hr" element={<HR />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
