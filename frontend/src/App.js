@@ -7,6 +7,8 @@ import Opportunities from './pages/Opportunities'
 import Invoicing from './pages/Invoicing'
 import Projects from './pages/Projects'
 import HR from './pages/HR'
+import ERP from './pages/ERP'
+import Dashboard from './pages/Dashboard'
 
 const queryClient = new QueryClient()
 
@@ -23,6 +25,8 @@ function App() {
             <Route path="/invoicing" element={<Invoicing />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/hr" element={<HR />} />
+            <Route path="/erp" element={<ERP />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
