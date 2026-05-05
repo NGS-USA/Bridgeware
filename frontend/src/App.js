@@ -10,6 +10,7 @@ import HR from './pages/HR'
 import ERP from './pages/ERP'
 import Dashboard from './pages/Dashboard'
 import Settings from './pages/Settings'
+import Workflows from './pages/Workflows'
 
 const queryClient = new QueryClient()
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/erp" element={<ERP />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/workflows" element={<Workflows />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
