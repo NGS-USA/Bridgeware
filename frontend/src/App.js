@@ -16,6 +16,8 @@ import Workflows from './pages/Workflows'
 import Account from './pages/Account'
 import AuditLog from './pages/AuditLog'
 import NewTicket from './pages/NewTicket'
+import NewCompany from './pages/NewCompany'
+import NewContact from './pages/NewContact'
 
 const queryClient = new QueryClient()
 
@@ -43,6 +45,8 @@ function App() {
                   <Route path="/account" element={<Account />} />
                   <Route path="/audit-log" element={<AuditLog />} />
                   <Route path="/ticketing/new" element={<NewTicket />} />
+                  <Route path="/crm/new" element={<NewCompany />} />
+                  <Route path="/crm/contacts/new" element={<NewContact />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
