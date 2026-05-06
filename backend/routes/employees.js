@@ -6,7 +6,7 @@ const { logAudit } = require('../lib/audit')
 router.get('/', async (req, res) => {
   const { data, error } = await supabase
     .from('employees')
-    .select('*, users(id, full_name, email, role, avatar_initials, is_active), departments(name), teams(name)')
+    .select('*, departments(name), teams(name)')
     .order('created_at', { ascending: false })
   if (error) return res.status(400).json({ error })
   res.json(data)
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const { data, error } = await supabase
     .from('employees')
-    .select('*, users(id, full_name, email, role, avatar_initials, is_active), departments(name), teams(name)')
+    .select('*, departments(name), teams(name)')
     .eq('id', req.params.id)
     .single()
   if (error) return res.status(400).json({ error })
