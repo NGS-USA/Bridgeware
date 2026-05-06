@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function Ticketing() {
-  const { data: tickets, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['tickets'],
     queryFn: () => client.get('/tickets').then(res => res.data)
   })
+
+  const tickets = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading tickets...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load tickets.</div>

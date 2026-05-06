@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function Opportunities() {
-  const { data: opportunities, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['opportunities'],
     queryFn: () => client.get('/opportunities').then(res => res.data)
   })
+
+  const opportunities = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading opportunities...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load opportunities.</div>

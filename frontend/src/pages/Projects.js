@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function Projects() {
-  const { data: projects, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['projects'],
     queryFn: () => client.get('/projects').then(res => res.data)
   })
+
+  const projects = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading projects...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load projects.</div>

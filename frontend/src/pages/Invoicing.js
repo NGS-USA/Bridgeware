@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function Invoicing() {
-  const { data: invoices, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['invoices'],
     queryFn: () => client.get('/invoices').then(res => res.data)
   })
+
+  const invoices = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading invoices...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load invoices.</div>

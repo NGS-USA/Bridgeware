@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function CRM() {
-  const { data: companies, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['companies'],
     queryFn: () => client.get('/companies').then(res => res.data)
   })
+
+  const companies = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading companies...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load companies.</div>

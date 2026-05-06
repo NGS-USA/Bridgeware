@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function ERP() {
-  const { data: vendors, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['vendors'],
     queryFn: () => client.get('/vendors').then(res => res.data)
   })
+
+  const vendors = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading vendors...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load vendors.</div>

@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
 
 function HR() {
-  const { data: employees, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['employees'],
     queryFn: () => client.get('/users').then(res => res.data)
   })
+
+  const employees = Array.isArray(data) ? data : []
 
   if (isLoading) return <div className="p-8 text-gray-500">Loading employees...</div>
   if (isError) return <div className="p-8 text-red-500">Failed to load employees.</div>
