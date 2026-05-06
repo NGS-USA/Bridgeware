@@ -25,6 +25,8 @@ import NewProject from './pages/NewProject'
 import NewTask from './pages/NewTask'
 import NewEmployee from './pages/NewEmployee'
 import NewPTORequest from './pages/NewPTORequest'
+import NewVendor from './pages/NewVendor'
+import NewInventoryItem from './pages/NewInventoryItem'
 
 const queryClient = new QueryClient()
 
@@ -61,6 +63,8 @@ function App() {
                   <Route path="/projects/tasks/new" element={<NewTask />} />
                   <Route path="/hr/new" element={<NewEmployee />} />
                   <Route path="/hr/pto/new" element={<NewPTORequest />} />
+                  <Route path="/erp/vendors/new" element={<NewVendor />} />
+                  <Route path="/erp/inventory/new" element={<NewInventoryItem />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
