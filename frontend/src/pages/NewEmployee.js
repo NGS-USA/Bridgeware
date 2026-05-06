@@ -10,6 +10,7 @@ function NewEmployee() {
   const [form, setForm] = useState({
     full_name: '',
     email: '',
+    password: '',
     role: 'user',
     job_title: '',
     employment_type: 'Full-time',
@@ -103,6 +104,19 @@ function NewEmployee() {
               placeholder="jane@company.com"
             />
           </div>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-xs font-medium text-gray-600 mb-1">Temporary password <span className="text-red-400">*</span></label>
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            required
+            className="w-full border border-gray-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
+            placeholder="Employee will be asked to change this on first login"
+          />
         </div>
 
         <div className="grid grid-cols-2 gap-4 mb-4">

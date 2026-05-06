@@ -1,12 +1,12 @@
 import { useQuery } from '@tanstack/react-query'
-import client from '../api/client'
 import { useNavigate } from 'react-router-dom'
+import client from '../api/client'
 
 function HR() {
   const navigate = useNavigate()
   const { data, isLoading, isError } = useQuery({
     queryKey: ['employees'],
-    queryFn: () => client.get('/users').then(res => res.data)
+    queryFn: () => client.get('/employees').then(res => res.data)
   })
 
   const employees = Array.isArray(data) ? data : []
@@ -32,12 +32,17 @@ function HR() {
           {employees.map(employee => (
             <div key={employee.id} className="flex items-center gap-4 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
               <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-medium flex-shrink-0">
-                {employee.avatar_initials || employee.full_name?.charAt(0)}
+                {employee.users?.avatar_initials || employee.users?.full_name?.charAt(0)}
               </div>
-              <span className="text-sm font-medium text-gray-900 flex-1">{employee.full_name}</span>
-              <span className="text-xs text-gray-400">{employee.role}</span>
+              <div className="flex-1 min-w-0">
+                <div className="text-sm font-medium text-gray-900">{employee.users?.full_name}</div>
+                <div className="text-xs text-gray-400">
+                  {employee.job_title}{employee.departments?.name ? ` · ${employee.departments.name}` : ''}
+                </div>
+              </div>
+              <span className="text-xs text-gray-400">{employee.employment_type}</span>
               <span className="text-xs font-medium bg-green-50 text-green-700 px-2 py-1 rounded">
-                {employee.is_active ? 'Active' : 'Inactive'}
+                {employee.users?.is_active ? 'Active' : 'Inactive'}
               </span>
             </div>
           ))}
