@@ -1,6 +1,9 @@
 import Sidebar from '../components/Sidebar'
+import useSessionTimeout from '../hooks/useSessionTimeout'
 
 function MainLayout({ children }) {
+  useSessionTimeout()
+
   return (
     <div className="flex">
       <Sidebar />

@@ -30,6 +30,7 @@ const loginLimiter = rateLimit({
   max: 10,
   message: 'Too many login attempts, please try again later'
 })
+app.use('/api/auth', loginLimiter)
 
 app.use((req, res, next) => {
   logger.info({ method: req.method, url: req.url, ip: req.ip })
