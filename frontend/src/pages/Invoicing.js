@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
+import { useNavigate } from 'react-router-dom'
 
 function Invoicing() {
+  const navigate = useNavigate()
   const { data, isLoading, isError } = useQuery({
     queryKey: ['invoices'],
     queryFn: () => client.get('/invoices').then(res => res.data)
@@ -16,7 +18,10 @@ function Invoicing() {
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-medium text-gray-900">Invoicing</h1>
-        <button className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700">
+        <button
+          onClick={() => navigate('/invoicing/new')}
+          className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700"
+        >
           New invoice
         </button>
       </div>
