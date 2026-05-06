@@ -20,6 +20,7 @@ function Login() {
       setError(error.message)
       setLoading(false)
     } else {
+      sessionStorage.setItem('check_mfa', 'true')
       navigate('/dashboard')
     }
   }

@@ -15,19 +15,19 @@ function ProtectedRoute({ children }) {
         return
       }
 
+      const shouldCheck = sessionStorage.getItem('check_mfa')
       const dismissed = localStorage.getItem('mfa_prompt_dismissed')
-      if (dismissed) {
-        setLoading(false)
-        return
+
+      if (shouldCheck && !dismissed) {
+        const { data } = await supabase.auth.mfa.listFactors()
+        const hasMFA = data?.totp?.length > 0
+
+        if (!hasMFA) {
+          setShowMFA(true)
+        }
       }
 
-      const { data } = await supabase.auth.mfa.listFactors()
-      const hasMFA = data?.totp?.length > 0
-
-      if (!hasMFA) {
-        setShowMFA(true)
-      }
-
+      sessionStorage.removeItem('check_mfa')
       setLoading(false)
     })
   }, [navigate])
