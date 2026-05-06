@@ -14,6 +14,7 @@ import Dashboard from './pages/Dashboard'
 import Settings from './pages/Settings'
 import Workflows from './pages/Workflows'
 import Account from './pages/Account'
+import AuditLog from './pages/AuditLog'
 
 const queryClient = new QueryClient()
 
@@ -39,6 +40,7 @@ function App() {
                   <Route path="/settings" element={<Settings />} />
                   <Route path="/workflows" element={<Workflows />} />
                   <Route path="/account" element={<Account />} />
+                  <Route path="/audit-log" element={<AuditLog />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>

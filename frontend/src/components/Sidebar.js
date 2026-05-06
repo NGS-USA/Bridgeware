@@ -57,6 +57,9 @@ function Sidebar() {
         <NavLink to="/settings" className={({ isActive }) => `flex items-center gap-2 px-2 py-1.5 rounded text-xs mb-1 ${isActive ? 'bg-slate-700 text-slate-100 font-medium' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'}`}>
           Settings
         </NavLink>
+        <NavLink to="/audit-log" className={({ isActive }) => `flex items-center gap-2 px-2 py-1.5 rounded text-xs mb-1 ${isActive ? 'bg-slate-700 text-slate-100 font-medium' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'}`}>
+          Audit log
+        </NavLink>
       </nav>
       <div className="p-2 border-t border-slate-800">
         <div className="flex items-center gap-2 px-2 py-1.5">
