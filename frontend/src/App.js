@@ -18,6 +18,8 @@ import AuditLog from './pages/AuditLog'
 import NewTicket from './pages/NewTicket'
 import NewCompany from './pages/NewCompany'
 import NewContact from './pages/NewContact'
+import NewOpportunity from './pages/NewOpportunity'
+import NewQuote from './pages/NewQuote'
 
 const queryClient = new QueryClient()
 
@@ -47,6 +49,8 @@ function App() {
                   <Route path="/ticketing/new" element={<NewTicket />} />
                   <Route path="/crm/new" element={<NewCompany />} />
                   <Route path="/crm/contacts/new" element={<NewContact />} />
+                  <Route path="/sales/new" element={<NewOpportunity />} />
+                  <Route path="/sales/quotes/new" element={<NewQuote />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
