@@ -1,6 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import supabase from '../api/supabase'
 
 function Sidebar() {
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut()
+    navigate('/login')
+  }
+
   return (
     <div className="w-48 bg-slate-900 flex flex-col h-screen fixed left-0 top-0">
       <div className="p-3 border-b border-slate-800 flex items-center gap-2">
@@ -51,12 +59,15 @@ function Sidebar() {
         </NavLink>
       </nav>
       <div className="p-2 border-t border-slate-800">
-        <div className="flex items-center gap-2 px-2 py-1.5 cursor-pointer">
-          <div className="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-content:center text-slate-300 text-xs font-medium">JD</div>
-          <div>
+        <div className="flex items-center gap-2 px-2 py-1.5">
+          <div className="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 text-xs font-medium flex-shrink-0">JD</div>
+          <div className="flex-1">
             <div className="text-slate-300 text-xs font-medium">Jane Doe</div>
             <div className="text-slate-500 text-xs">Admin</div>
           </div>
+          <button onClick={handleLogout} className="text-slate-500 hover:text-slate-300 text-xs transition-colors">
+            Sign out
+          </button>
         </div>
       </div>
     </div>
