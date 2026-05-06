@@ -13,6 +13,7 @@ import ERP from './pages/ERP'
 import Dashboard from './pages/Dashboard'
 import Settings from './pages/Settings'
 import Workflows from './pages/Workflows'
+import Account from './pages/Account'
 
 const queryClient = new QueryClient()
 
@@ -37,6 +38,7 @@ function App() {
                   <Route path="/erp" element={<ERP />} />
                   <Route path="/settings" element={<Settings />} />
                   <Route path="/workflows" element={<Workflows />} />
+                  <Route path="/account" element={<Account />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>

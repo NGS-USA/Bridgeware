@@ -61,7 +61,7 @@ function Sidebar() {
       <div className="p-2 border-t border-slate-800">
         <div className="flex items-center gap-2 px-2 py-1.5">
           <div className="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 text-xs font-medium flex-shrink-0">JD</div>
-          <div className="flex-1">
+          <div className="flex-1 cursor-pointer" onClick={() => navigate('/account')}>
             <div className="text-slate-300 text-xs font-medium">Jane Doe</div>
             <div className="text-slate-500 text-xs">Admin</div>
           </div>
