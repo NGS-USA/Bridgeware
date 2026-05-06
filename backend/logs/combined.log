@@ -38,3 +38,39 @@
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-04T23:54:20.870Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:24.147Z"}
 {"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-04T23:54:24.985Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-06T00:13:01.161Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-06T00:17:57.646Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-06T00:18:52.709Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-06T00:19:25.785Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/invoices"},"timestamp":"2026-05-06T00:19:25.803Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/projects"},"timestamp":"2026-05-06T00:19:25.805Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:25.807Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:31.775Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-06T00:19:32.693Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-06T00:19:34.385Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/projects"},"timestamp":"2026-05-06T00:19:35.638Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/invoices"},"timestamp":"2026-05-06T00:19:36.391Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/vendors"},"timestamp":"2026-05-06T00:19:36.785Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/users"},"timestamp":"2026-05-06T00:19:37.259Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:44.918Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-06T00:19:46.218Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:46.219Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/invoices"},"timestamp":"2026-05-06T00:19:46.221Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/projects"},"timestamp":"2026-05-06T00:19:46.223Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:48.484Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-06T00:19:48.841Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-06T00:19:49.623Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:49.917Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-06T00:19:50.282Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:50.283Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/invoices"},"timestamp":"2026-05-06T00:19:50.284Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/projects"},"timestamp":"2026-05-06T00:19:50.284Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:53.058Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-06T00:19:55.910Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/opportunities"},"timestamp":"2026-05-06T00:19:56.543Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:56.802Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/tickets"},"timestamp":"2026-05-06T00:19:57.644Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/companies"},"timestamp":"2026-05-06T00:19:57.649Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/invoices"},"timestamp":"2026-05-06T00:19:57.651Z"}
+{"level":"info","message":{"ip":"::1","method":"GET","url":"/api/projects"},"timestamp":"2026-05-06T00:19:57.652Z"}
+{"level":"info","message":"Bridgeware backend running on port 4000","timestamp":"2026-05-06T00:20:22.843Z"}
