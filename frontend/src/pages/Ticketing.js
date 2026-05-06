@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
+import { useNavigate } from 'react-router-dom'
 
 function Ticketing() {
+  const navigate = useNavigate()
   const { data, isLoading, isError } = useQuery({
     queryKey: ['tickets'],
     queryFn: () => client.get('/tickets').then(res => res.data)
@@ -16,7 +18,10 @@ function Ticketing() {
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-medium text-gray-900">Ticketing</h1>
-        <button className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700">
+        <button
+          onClick={() => navigate('/ticketing/new')}
+          className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700"
+        >
           New ticket
         </button>
       </div>
