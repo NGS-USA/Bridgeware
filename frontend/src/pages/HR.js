@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import client from '../api/client'
+import { useNavigate } from 'react-router-dom'
 
 function HR() {
+  const navigate = useNavigate()
   const { data, isLoading, isError } = useQuery({
     queryKey: ['employees'],
     queryFn: () => client.get('/users').then(res => res.data)
@@ -16,7 +18,10 @@ function HR() {
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-medium text-gray-900">HR</h1>
-        <button className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700">
+        <button
+          onClick={() => navigate('/hr/new')}
+          className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700"
+        >
           Add employee
         </button>
       </div>
