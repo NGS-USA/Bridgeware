@@ -29,6 +29,12 @@ import NewVendor from './pages/NewVendor'
 import NewInventoryItem from './pages/NewInventoryItem'
 import MFAChallenge from './pages/MFAChallenge'
 import SecuritySettings from './pages/SecuritySettings'
+import PortalLogin from './pages/portal/PortalLogin'
+import PortalDashboard from './pages/portal/PortalDashboard'
+import PortalTickets from './pages/portal/PortalTickets'
+import PortalInvoices from './pages/portal/PortalInvoices'
+import PortalQuotes from './pages/portal/PortalQuotes'
+import PortalDocuments from './pages/portal/PortalDocuments'
 
 const queryClient = new QueryClient()
 
@@ -69,6 +75,12 @@ function App() {
                   <Route path="/erp/inventory/new" element={<NewInventoryItem />} />
                   <Route path="/mfa-challenge" element={<MFAChallenge />} />
                   <Route path="/settings/security" element={<SecuritySettings />} />
+                  <Route path="/portal" element={<PortalLogin />} />
+                  <Route path="/portal/dashboard" element={<PortalDashboard />} />
+                  <Route path="/portal/tickets" element={<PortalTickets />} />
+                  <Route path="/portal/invoices" element={<PortalInvoices />} />
+                  <Route path="/portal/quotes" element={<PortalQuotes />} />
+                  <Route path="/portal/documents" element={<PortalDocuments />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
