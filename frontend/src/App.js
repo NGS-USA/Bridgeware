@@ -28,6 +28,7 @@ import NewPTORequest from './pages/NewPTORequest'
 import NewVendor from './pages/NewVendor'
 import NewInventoryItem from './pages/NewInventoryItem'
 import MFAChallenge from './pages/MFAChallenge'
+import SecuritySettings from './pages/SecuritySettings'
 
 const queryClient = new QueryClient()
 
@@ -67,6 +68,7 @@ function App() {
                   <Route path="/erp/vendors/new" element={<NewVendor />} />
                   <Route path="/erp/inventory/new" element={<NewInventoryItem />} />
                   <Route path="/mfa-challenge" element={<MFAChallenge />} />
+                  <Route path="/settings/security" element={<SecuritySettings />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
