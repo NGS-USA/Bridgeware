@@ -14,11 +14,20 @@ function Login() {
     setLoading(true)
     setError(null)
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (error) {
       setError(error.message)
       setLoading(false)
+      return
+    }
+
+    const { data: factors } = await supabase.auth.mfa.listFactors()
+    const hasMFA = factors?.totp?.length > 0
+
+    if (hasMFA) {
+      sessionStorage.setItem('check_mfa', 'true')
+      navigate('/mfa-challenge')
     } else {
       sessionStorage.setItem('check_mfa', 'true')
       navigate('/dashboard')
