@@ -1,8 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
+import { useNavigate } from 'react-router-dom'
 import PortalLayout from '../../layouts/PortalLayout'
 import client from '../../api/client'
 
 function PortalTickets() {
+  const navigate = useNavigate()
+
   const { data, isLoading } = useQuery({
     queryKey: ['portal-tickets'],
     queryFn: () => client.get('/tickets').then(res => res.data)
@@ -21,9 +24,13 @@ function PortalTickets() {
         ) : (
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
             {tickets.map(ticket => (
-              <div key={ticket.id} className="flex items-center gap-4 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
+              <div
+                key={ticket.id}
+                onClick={() => navigate(`/portal/tickets/${ticket.id}`)}
+                className="flex items-center gap-4 px-4 py-3 border-b border-gray-100 hover:bg-gray-50 cursor-pointer"
+              >
                 <span className="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-1 rounded">{ticket.status}</span>
-                <span className="text-sm font-medium text-gray-900 flex-1">{ticket.title}</span>
+                <span className="text-sm font-medium text-gray-900 flex-1">{ticket.subject || ticket.title}</span>
                 <span className="text-xs text-gray-400">{ticket.priority}</span>
                 <span className="text-xs text-gray-400">{new Date(ticket.created_at).toLocaleDateString()}</span>
               </div>

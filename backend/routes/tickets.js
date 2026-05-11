@@ -69,4 +69,35 @@ router.delete('/:id', async (req, res) => {
   res.status(204).send()
 })
 
+// Get replies for a ticket
+router.get('/:id/replies', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('ticket_replies')
+      .select('*')
+      .eq('ticket_id', req.params.id)
+      .order('created_at', { ascending: true })
+    if (error) throw error
+    res.json(data)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
+// Post a reply to a ticket
+router.post('/:id/replies', async (req, res) => {
+  const { message, author_name } = req.body
+  try {
+    const { data, error } = await supabase
+      .from('ticket_replies')
+      .insert([{ ticket_id: req.params.id, message, author_name }])
+      .select()
+      .single()
+    if (error) throw error
+    res.status(201).json(data)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
 module.exports = router
