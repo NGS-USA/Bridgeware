@@ -60,6 +60,7 @@ const timeEntriesRouter = require('./routes/timeEntries')
 const ptoRequestsRouter = require('./routes/ptoRequests')
 const auditLogRouter = require('./routes/auditLog')
 const employeesRouter = require('./routes/employees')
+const paymentsRouter = require('./routes/payments')
 
 app.use('/api/tickets', ticketsRouter)
 app.use('/api/companies', companiesRouter)
@@ -80,6 +81,7 @@ app.use('/api/time-entries', timeEntriesRouter)
 app.use('/api/pto-requests', ptoRequestsRouter)
 app.use('/api/audit-log', auditLogRouter)
 app.use('/api/employees', employeesRouter)
+app.use('/api/payments', paymentsRouter)
 
 app.use((err, req, res, next) => {
   logger.error({ error: err.message, stack: err.stack })

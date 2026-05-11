@@ -148,4 +148,13 @@ function SecuritySettings() {
       </div>
 
       <button
-        onClick={handle
+        onClick={handleSave}
+        className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Save settings
+      </button>
+    </div>
+  )
+}
+
+export default SecuritySettings
