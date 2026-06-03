@@ -81,13 +81,6 @@ function TicketDetail() {
     'Closed': 'bg-gray-100 text-gray-500',
   }
 
-  const priorityColors = {
-    'Low': 'bg-gray-100 text-gray-500',
-    'Medium': 'bg-blue-50 text-blue-700',
-    'High': 'bg-orange-50 text-orange-700',
-    'Critical': 'bg-red-50 text-red-700',
-  }
-
   const statuses = ['Open', 'In progress', 'Pending customer', 'Escalated', 'Resolved', 'Closed']
   const priorities = ['Low', 'Medium', 'High', 'Critical']
 
