@@ -15,6 +15,7 @@ function Settings() {
     { title: 'Global status manager', desc: 'Statuses for all modules', path: '/settings/statuses' },
     { title: 'PTO approval chain', desc: 'Hierarchy-aware escalation', path: '/settings/pto' },
     { title: 'Security', desc: 'MFA enforcement, session timeout, password rules', path: '/settings/security' },
+    { title: 'Client portal permissions', desc: 'Control what each client can see in the portal', path: '/settings/portal-permissions' },
     { title: 'Integrations', desc: 'QuickBooks, vendor APIs', path: '/settings/integrations' },
   ]
 
