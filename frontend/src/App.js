@@ -38,6 +38,7 @@ import PortalDocuments from './pages/portal/PortalDocuments'
 import PortalTicketDetail from './pages/portal/PortalTicketDetail'
 import PortalPermissionsSettings from './pages/PortalPermissionsSettings'
 import TicketDetail from './pages/TicketDetail'
+import InvoiceDetail from './pages/InvoiceDetail'
 
 const queryClient = new QueryClient()
 
@@ -87,6 +88,7 @@ function App() {
                   <Route path="/portal/tickets/:id" element={<PortalTicketDetail />} />
                   <Route path="/settings/portal-permissions" element={<PortalPermissionsSettings />} />
                   <Route path="/ticketing/:id" element={<TicketDetail />} />
+                  <Route path="/invoicing/:id" element={<InvoiceDetail />} />
                 </Routes>
               </MainLayout>
             </ProtectedRoute>
